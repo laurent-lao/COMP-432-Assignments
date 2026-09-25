@@ -1,0 +1,14 @@
+#:schema https://jdx.dev
+
+[tools]
+python = "3.13"
+uv = "latest"
+
+[env]
+_.python.venv = { path = ".venv", create = true }
+
+[tasks.install]
+description = "Install requirements automatically"
+run = "uv pip install -r requirements.txt"
+hide = true
+
